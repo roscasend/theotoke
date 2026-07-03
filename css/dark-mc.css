@@ -1,0 +1,34 @@
+.dark-medium-contrast {
+  --primary: rgb(239 221 131);
+  --on-primary: rgb(44 38 0);
+  --primary-container: rgb(160 145 64);
+  --on-primary-container: rgb(0 0 0);
+  
+  --secondary: rgb(230 220 182);
+  --on-secondary: rgb(42 38 13);
+  --secondary-container: rgb(153 145 111);
+  --on-secondary-container: rgb(0 0 0);
+  
+  --tertiary: rgb(190 230 202);
+  --on-tertiary: rgb(6 44 26);
+  --tertiary-container: rgb(115 153 128);
+  --on-tertiary-container: rgb(0 0 0);
+  
+  --error: rgb(255 210 204);
+  --on-error: rgb(84 0 3);
+  --error-container: rgb(255 84 73);
+  --on-error-container: rgb(0 0 0);
+  
+  --background: rgb(21 19 12);
+  --on-background: rgb(232 226 212);
+  --surface: rgb(21 19 12);
+  --on-surface: rgb(255 255 255);
+  --surface-variant: rgb(74 71 57);
+  --on-surface-variant: rgb(227 220 202);
+  
+  --outline: rgb(183 178 161);
+  --outline-variant: rgb(149 144 128);
+  --primary-dark: rgb(44 38 0);
+  --primary-light: rgb(239 221 131);
+}
+}

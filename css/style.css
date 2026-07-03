@@ -2,25 +2,75 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Tema implicita (light) */
+  --primary: #1976d2;
+  --primary-light: #42a5f5;
+  --primary-dark: #1565c0;
+  --on-primary: #ffffff;
+  
+  --secondary: #455a64;
+  --on-secondary: #ffffff;
+  
+  --background: #ffffff;
+  --on-background: #212121;
+  --surface: #ffffff;
+  --on-surface: #212121;
+  
+  --accent: #ff6b00;
+  --error: #b3261e;
+  --on-error: #ffffff;
+}
+
+.dark-high-contrast {
+  --primary: rgb(255 240 176);
+  --on-primary: rgb(0 0 0);
+  --primary-container: rgb(212 195 108);
+  --on-primary-container: rgb(14 11 0);
+  
+  --secondary: rgb(250 240 201);
+  --on-secondary: rgb(0 0 0);
+  
+  --tertiary: rgb(209 250 221);
+  --on-tertiary: rgb(0 0 0);
+  
+  --background: rgb(21 19 12);
+  --on-background: rgb(232 226 212);
+  --surface: rgb(21 19 12);
+  --on-surface: rgb(255 255 255);
+  --surface-variant: rgb(74 71 57);
+  --on-surface-variant: rgb(255 255 255);
+  
+  --error: rgb(255 236 233);
+  --on-error: rgb(0 0 0);
+  --error-container: rgb(255 174 164);
+  
+  --outline: rgb(247 240 221);
+  --outline-variant: rgb(200 194 177);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--background);
+  color: var(--on-background);
 }
 
 /* HEADER GENERAL */
 
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background: var(--surface);
+  border-bottom: 1px solid var(--outline-variant);
+  color: var(--on-surface);
 }
 
 /* BARA DE SUS */
 
 .top-header {
-  background: #f5f0e8;
+  background: var(--surface-variant);
   font-size: 14px;
 }
 
@@ -38,15 +88,18 @@ body {
 .social-info {
   display: flex;
   gap: 18px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .top-header a {
-  color: #3a2a1a;
+  color: var(--on-surface-variant);
   text-decoration: none;
 }
 
 .top-header a:hover {
   text-decoration: underline;
+  color: var(--primary);
 }
 
 /* MENIU PRINCIPAL */
@@ -55,20 +108,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: relative;
+  
 }
 
 .logo {
   background: url('../img/theotoke.png') no-repeat center;
   background-size: contain;
-  width: 6rem;
-  height: 6rem;
-  color: #222;
+  width: 7rem;
+  height: 5rem;
+  color: var(--on-surface);
   text-decoration: none;
 }
 
@@ -83,19 +135,40 @@ body {
 }
 
 .menu a {
-  color: #222;
+  color: var(--on-surface);
   text-decoration: none;
   font-size: 16px;
 }
 
 .menu a:hover {
-  color: #8a5a2b;
+  color: var(--primary);
 }
 
 .account-link {
   padding: 10px 16px;
-  border: 1px solid #8a5a2b;
+  border: 1px solid var(--primary);
   border-radius: 6px;
+  color: var(--on-surface);
+}
+
+.account-link:hover {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+#theme-selector {
+  padding: 8px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#theme-selector:hover {
+  background: var(--surface-variant);
+  border-color: var(--primary-light);
 }
 
 /* CHECKBOX ASCUNS */
@@ -116,7 +189,7 @@ body {
 .hamburger span {
   width: 28px;
   height: 3px;
-  background: #222;
+  background: var(--on-surface);
   border-radius: 3px;
 }
 
@@ -147,8 +220,8 @@ body {
     left: 0;
     right: 0;
 
-    background: #ffffff;
-    border-top: 1px solid #ddd;
+    background: var(--surface);
+    border-top: 1px solid var(--outline-variant);
 
     flex-direction: column;
     align-items: flex-start;
@@ -182,14 +255,15 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  background: #f5f0e8;
+  background: var(--surface);
   flex: 1;
   width: 100%;
 }
 
 footer {
-  background: #222;
-  color: #fff;
+  background: var(--primary-dark);
+  color: var(--on-primary);
   text-align: center;
   padding: 16px 24px;
 }
+

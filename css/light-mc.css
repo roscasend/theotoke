@@ -1,0 +1,34 @@
+.light-medium-contrast {
+  --primary: rgb(63 54 0);
+  --on-primary: rgb(255 255 255);
+  --primary-container: rgb(123 109 31);
+  --on-primary-container: rgb(255 255 255);
+  
+  --secondary: rgb(60 54 28);
+  --on-secondary: rgb(255 255 255);
+  --secondary-container: rgb(116 109 78);
+  --on-secondary-container: rgb(255 255 255);
+  
+  --tertiary: rgb(25 61 41);
+  --on-tertiary: rgb(255 255 255);
+  --tertiary-container: rgb(80 117 94);
+  --on-tertiary-container: rgb(255 255 255);
+  
+  --error: rgb(116 0 6);
+  --on-error: rgb(255 255 255);
+  --error-container: rgb(207 44 39);
+  --on-error-container: rgb(255 255 255);
+  
+  --background: rgb(255 249 236);
+  --on-background: rgb(30 28 19);
+  --surface: rgb(255 249 236);
+  --on-surface: rgb(19 17 9);
+  --surface-variant: rgb(233 226 208);
+  --on-surface-variant: rgb(57 54 41);
+  
+  --outline: rgb(86 82 68);
+  --outline-variant: rgb(113 109 94);
+  --primary-dark: rgb(63 54 0);
+  --primary-light: rgb(123 109 31);
+}
+}
