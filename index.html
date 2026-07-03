@@ -91,49 +91,8 @@
   </main>
   <footer>© Copyright Editura Theotoke </footer>
 
-<script>
-// Theme Switcher
-const themeMap = {
-  'css/light.css': 'light',
-  'css/dark.css': 'dark',
-  'css/light-hc.css': 'light-high-contrast',
-  'css/light-mc.css': 'light-medium-contrast',
-  'css/dark-hc.css': 'dark-high-contrast',
-  'css/dark-mc.css': 'dark-medium-contrast'
-};
-
-function applyTheme(themePath) {
-  document.getElementById('theme').href = themePath;
-  
-  // Remove all theme classes and add the appropriate one
-  Object.values(themeMap).forEach(className => {
-    document.documentElement.classList.remove(className);
-  });
-  
-  if (themeMap[themePath]) {
-    document.documentElement.classList.add(themeMap[themePath]);
-  }
-  
-  localStorage.setItem('theme', themePath);
-}
-
-document.getElementById('theme-selector').addEventListener('change', function(e) {
-  applyTheme(e.target.value);
-});
-
-// Load saved theme on page load
-window.addEventListener('load', function() {
-  const savedTheme = localStorage.getItem('theme') || 'css/dark-hc.css';
-  document.getElementById('theme').href = savedTheme;
-  document.getElementById('theme-selector').value = savedTheme;
-  
-  if (themeMap[savedTheme]) {
-    document.documentElement.classList.add(themeMap[savedTheme]);
-  }
-});
-</script>
+<script src="js/theme-switcher.js"></script>
 
   </body>
-</body>
 
 </html>
